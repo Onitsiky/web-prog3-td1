@@ -1,0 +1,8 @@
+.view-container{
+    position: relative;
+}
+.view-elem-columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
