@@ -1,9 +1,9 @@
-import React, {ChangeEventHandler, useState} from "react";
-import Input from "../Input/Input";
-import Column from "../Column/Column";
+import React, {useState} from "react";
+import Input from "../Components/Input/Input";
+import Column from "../Components/Column/Column";
 import "./View.css";
-import {IListIem} from "../utils/Interfaces";
-import Item from "../Item/Item";
+import {IListIem} from "../Components/utils/Interfaces";
+import Item from "../Components/Item/Item";
 
 type IView = {
 
@@ -30,12 +30,6 @@ const View : React.FC<IView> = () => {
     function todoToDone (description : string, index : number){
         setTodoList(todoList.filter((item) => item.index !== index));
         setDoneList([...doneList, {index: index, description: description}]);
-    }
-
-    function handleChange (e : any, description : string, index : number){
-        if(e.target.checked){
-            todoToDone(description, index);
-        }
     }
     return(
         <div className="view-container">
