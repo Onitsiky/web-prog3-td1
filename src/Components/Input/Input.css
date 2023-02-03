@@ -1,7 +1,9 @@
 .input-container{
+    position: relative;
     display: flex;
     justify-content: center;
     margin: 1% 4%;
+    animation: entry 1s linear;
 }
 .input-field{
     width: 40vw;
@@ -14,4 +16,15 @@
 }
 .input-field:hover{
     transform: scale(1.01,1.01);
+}
+@keyframes entry {
+    0%{
+        top: -25%;
+    }
+    50%{
+        top: -12%;
+    }
+    100%{
+        top: 0
+    }
 }
