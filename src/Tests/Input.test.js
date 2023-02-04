@@ -19,5 +19,5 @@ it("Render Input", () => {
     userEvent.type(inputField, "Todo-test")
     expect(inputField).toHaveValue("Todo-test");
     fireEvent.submit(inputField);
-    expect(inputField).toBeEmpty();
+    expect(inputField).toBeEmptyDOMElement();
 })
