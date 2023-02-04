@@ -1,5 +1,6 @@
 import React from "react";
 import {IItem} from "../utils/Interfaces";
+import "./Item.css";
 
 
 const Item : React.FC<IItem> = (props) => {

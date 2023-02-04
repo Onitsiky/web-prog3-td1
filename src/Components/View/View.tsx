@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import Input from "../Components/Input/Input";
-import Column from "../Components/Column/Column";
+import Input from "../Input/Input";
+import Column from "../Column/Column";
 import "./View.css";
-import {IListIem} from "../Components/utils/Interfaces";
-import Item from "../Components/Item/Item";
+import {IListIem} from "../utils/Interfaces";
+import Item from "../Item/Item";
 
 type IView = {
 
@@ -42,7 +42,7 @@ const View : React.FC<IView> = () => {
                         todoList.map((todoItem : any) => (
                             <Item checkbox={true}
                                   label={todoItem.description}
-                                  key={todoItem.index}
+                                  index={todoItem.index}
                                   onChange={() => todoToDone(todoItem.description, todoItem.index)}/>
                         ))
                     }
@@ -50,12 +50,12 @@ const View : React.FC<IView> = () => {
                 <Column title="DONE">
                     {
                         doneList.map((doneItem : any) => (
-                            <Item checkbox={false} label={doneItem.description} key={doneItem.index}
+                            <Item checkbox={false} label={doneItem.description} index={doneItem.index}
                                   />
                         ))
                     }
                 </Column>
-            </div>item
+            </div>
         </div>
     )
 }
