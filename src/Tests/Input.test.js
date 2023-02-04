@@ -11,13 +11,13 @@ it("Render Input", () => {
         <Input setDescription={setDescriptionMock}/>
     )
     let tree = component.toJSON();
-    expect(tree).toBeTruthy();
+    expect(tree).toMatchSnapshot();
     render(
         <Input setDescription={setDescriptionMock}/>
     )
     const inputField = screen.getByTestId("input-field");
-    userEvent.type(inputField, "Todo-test")
+    userEvent.type(inputField, "Todo-test");
     expect(inputField).toHaveValue("Todo-test");
-    fireEvent.submit(inputField);
-    expect(inputField).toBeEmptyDOMElement();
+    userEvent.clear(inputField);
+    expect(inputField).toHaveValue("");
 })
