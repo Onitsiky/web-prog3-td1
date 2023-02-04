@@ -2,13 +2,13 @@ import React from "react";
 
 export interface IColumn {
     title: string,
-    children: React.ReactNode
+    children?: React.ReactNode
 }
 
 export interface IItem {
     checkbox: boolean,
     label: string,
-    key: number,
+    index: number,
     onChange?: (e : any) => void
 }
 

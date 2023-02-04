@@ -6,9 +6,9 @@ const Column : React.FC<IColumn> = (props) => {
     return(
         <div className="column-container">
             <div className="column-title-container">
-                <h3 className="column-title">{title}</h3>
+                <h3 className="column-title" data-testid="column-title">{title}</h3>
             </div>
-            <div className="column-elements">
+            <div className="column-elements" data-testid="column-elements">
                 {children}
             </div>
         </div>
