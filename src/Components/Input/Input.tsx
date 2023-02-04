@@ -7,6 +7,7 @@ const Input : React.FC<IInput> = (props) => {
         <div className="input-container">
             <input
                 type="text"
+                data-testid="input-field"
                 className="input-field"
                 placeholder="Enter new todo"
                 onChange={(e) => setDescription(e.target.value)}

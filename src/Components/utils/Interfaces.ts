@@ -13,7 +13,7 @@ export interface IItem {
 }
 
 export interface IInput {
-    setDescription: (e:string) => void
+    setDescription: (e : string) => void
 }
 
 export interface IListIem{
