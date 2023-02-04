@@ -7,10 +7,10 @@ const Item : React.FC<IItem> = (props) => {
     return(
         <div className="item-container" key={key}>
             {
-                checkbox && <input type="checkbox" onChange={onChange}/>
+                checkbox && <input type="checkbox" data-testid="item-input" onChange={onChange}/>
             }
-            <span>{label}</span>
+            <span data-testid="item-label">{label}</span>
         </div>
     )
 }
-export default Item
+export default Item;
